@@ -1,0 +1,32 @@
+﻿
+<div class="col-md-12">
+    <div class="col-md-3">
+        <h3>Tasks</h3>
+        <ul class="nav nav-pills nav-stacked" role="tablist">
+            <li  ng-repeat="t in tasks"
+                 ng-click="loadSubTask(t)" ng-class="{'active':t.Id===selectedTask.Id}">
+                <a href="javascript:void(0)">{{t.Name}}</a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="col-md-9">
+
+        <h4>{{selectedTask.Name}}</h4>
+        <hr />
+        <div class="panel-group">
+            <div class="panel panel-info" ng-repeat="s in subTasks">
+                <div class="panel-heading">{{s.Name}}</div>
+                <div class="panel-body">{{s.Description}}</div>
+                <div class="panel-footer panel-danger">{{s.TaskDueDate | date}}</div>
+            </div>
+        </div>
+       
+        <!--<ul class="nav flex-column" role="tablist">
+            <li class="nav-item" ng-repeat="s in subTasks">
+                <a href="javascript:void(0)">{{s.Name}}</a>
+            </li>
+        </ul>-->
+    </div>
+
+</div>

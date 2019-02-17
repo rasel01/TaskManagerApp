@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="taskmanager">
+<head>
+    <meta charset="utf-8" />
+    <title>Task Management App</title>
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="border-bottom:1px black solid">
+            <div class="col-md-6 col-lg-6">
+                <h1><a href="/#!/" style="text-decoration: none">TaskManager</a></h1>
+            </div>
+            <div class="col-md-6 col-lg-6">
+                <h4>
+                    <a href="/#!/task" style="text-decoration: none">task-entry</a> 
+                    | <a href="/#!/tasks" style="text-decoration: none">task-list</a> 
+                    |<a href="/#!/subtask" style="text-decoration: none">subtask-entry</a>
+                    |<a href="/#!/subtasks" style="text-decoration: none">subtask-list</a>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div ng-view></div>
+        </div>
+
+    </div>
+
+    <script src="partials/helpers/script/angular.min.js"></script>
+    <script src="partials/helpers/script/angular-route.min.js"></script>
+    <script src="partials/helpers/script/angular-resource.min.js"></script>
+    <script src="partials/helpers/script/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--custome module-->
+    <script src="partials/app/taskmanager.js"></script>
+
+    <!--custome controller-->
+    <script src="partials/app/home/homeController.js"></script>
+    <script src="partials/app/task/taskController.js"></script>
+    <script src="partials/app/task/tasksController.js"></script>
+    <script src="partials/app/task/taskdetailsController.js"></script>
+    <script src="partials/app/subtask/subtaskController.js"></script>
+    <script src="partials/app/subtask/subtasksController.js"></script>
+    <script src="partials/app/subtask/subtaskdetailsController.js"></script>
+
+    <!--custome services-->
+    <script src="partials/app/home/homeService.js"></script>
+    <script src="partials/app/task/taskService.js"></script>
+    <script src="partials/app/subtask/subtaskService.js"></script>
+
+
+</body>
+</html>

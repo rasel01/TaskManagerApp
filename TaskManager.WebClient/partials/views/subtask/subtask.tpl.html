@@ -1,0 +1,35 @@
+﻿<div class="col-md-10">
+    <h3>{{pagename}}</h3>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">SubTask Name:</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" placeholder="Enter  Name" ng-model="subtask.Name" />
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Description</label>
+            <div class="col-sm-4">
+                <textarea class="form-control" rows="5" ng-model="subtask.Description"></textarea>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Task</label>
+            <div class="col-sm-4">
+                <select class="form-control" ng-model="subtask.Task" ng-options="t.Name for t in tasks">
+                    <option value="">-- choose Task --</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success" ng-click="save()">{{btnname}}</button>
+                <!--<button class="btn btn-danger">Back</button>-->
+                <a class="btn btn-danger" href="/#/">Back</a>
+            </div>
+        </div>
+    </form>
+</div>
